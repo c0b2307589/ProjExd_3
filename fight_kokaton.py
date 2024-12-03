@@ -167,10 +167,7 @@ def main():
     bomb = Bomb((255, 0, 0), 10)
     beam = None  # 変更前のコード
     bombs = [Bomb((255, 0, 0), 10) for _ in range(NUM_OF_BOMBS)] 
-<<<<<<< HEAD
-=======
     beams = []  # 複数のビームを格納するリスト
->>>>>>> continuousbeam
     score = Score()
     clock = pg.time.Clock()
     tmr = 0
@@ -201,11 +198,8 @@ def main():
                     beams.remove(beam)  # ビームをリストから削除
                     bombs[i] = None
                     bird.change_img(6, screen)
-<<<<<<< HEAD
-                    score.increas() #"スコアを増加"
-=======
+
                     score.increas()  # スコアを増加
->>>>>>> continuousbeam
                     pg.display.update()
 
         bombs = [bomb for bomb in bombs if bomb is not None]  # Noneでないものリスト
@@ -219,16 +213,14 @@ def main():
         
         for bomb in bombs:
             bomb.update(screen)
-<<<<<<< HEAD
+
         if beam is not None:
             beam.update(screen)
         # bomb2.update(screen)
         
         score.draw(screen)   #スコアを表示
-=======
-        
-        score.draw(screen)  # スコアを表示
->>>>>>> continuousbeam
+
+
         pg.display.update()
         tmr += 1
         clock.tick(50)
